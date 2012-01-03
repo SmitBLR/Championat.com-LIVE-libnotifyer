@@ -90,7 +90,7 @@ class MainFrame < JFrame
     setVisible true
 
     Thread.new do
-      repeat_every 20 do
+      repeat_every 10 do
         check
       end
     end
@@ -131,8 +131,7 @@ class MainFrame < JFrame
                         </html>"
       end
     end
-
-    $links_to_parse.delete_if { |link| not $links.map { |l| l[:state].include? "конч" ? "" : l[:url] }.include? link[:url] }
+    $links_to_parse.delete_if { |link| not $links.map { |l| l[:state].include?("конч") ? "" : l[:url] }.include? link[:url] }
 
     $list.updateUI
 
