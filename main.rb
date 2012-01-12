@@ -4,6 +4,7 @@ include Java
 require "main_frame"
 require "rubygems"
 require "mechanize"
+require "ffi"
 require "libnotify"
 
-MainFrame.new 900, 480
+MainFrame.new 900, 780
